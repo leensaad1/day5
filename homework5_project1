@@ -1,0 +1,129 @@
+import java.util.Scanner;
+
+public class Main {
+    static Scanner input = new Scanner (System.in);
+    public static void main(String[] args) {
+
+        int operation = -1 ;
+        while ( operation != 0 ){
+            System.out.println("choose an operation from the list or enter 0 to quit: ");
+            System.out.println("1 : sum two numbers");
+            System.out.println("2 : subtract two numbers");
+            System.out.println("3 : multiply two numbers");
+            System.out.println("4 : divide two numbers");
+            System.out.println("5 : find maximum of 3 numbers");
+            System.out.println("6 : find minimum of 3 numbers");
+            System.out.println("7 : average of 3 numbers");
+            operation = input.nextInt();
+
+            if (operation == 1){
+                System.out.println("enter the 1st number: ");
+                int num1 = input.nextInt();
+                System.out.println("enter the 2nd number: ");
+                int num2 = input.nextInt();
+                sum(num1 , num2);
+                int result = sum(num1 , num2);
+                System.out.println("the result is: " + result);
+            }//if
+
+                else if (operation == 2){
+                    System.out.println("enter the 1st number: ");
+                    int num1 = input.nextInt();
+                    System.out.println("enter the 2nd number: ");
+                    int num2 = input.nextInt();
+                    int result = subtract(num1 , num2);
+                    System.out.println("the result is: " + result);
+
+                }//if
+            
+                    else if (operation == 3){
+                        System.out.println("enter the 1st number: ");
+                        int num1 = input.nextInt();
+                        System.out.println("enter the 2nd number: ");
+                        int num2 = input.nextInt();
+                        int result = multiply(num1 , num2);
+                        System.out.println("the result is: " + result);
+                    }//if
+
+                          else if (operation == 4){
+                            System.out.println("enter the 1st number: ");
+                            int num1 = input.nextInt();
+                            System.out.println("enter the 2nd number: ");
+                            int num2 = input.nextInt();
+                            int result = divide(num1 , num2);
+                            System.out.println("the result is: " + result);
+                          }//if
+
+                            else if (operation == 5){
+                                System.out.println("enter the 1st number: ");
+                                int num1 = input.nextInt();
+                                System.out.println("enter the 2nd number: ");
+                                int num2 = input.nextInt();
+                                System.out.println("enter the 3rd number: ");
+                                int num3 = input.nextInt();
+                                int result = max(num1 , num2 ,num3);
+                                System.out.println("the result is: " + result);
+                            }//if
+
+                               else if (operation == 6){
+                                    System.out.println("enter the 1st number: ");
+                                    int num1 = input.nextInt();
+                                    System.out.println("enter the 2nd number: ");
+                                    int num2 = input.nextInt();
+                                    System.out.println("enter the 3rd number: ");
+                                    int num3 = input.nextInt();
+                                    int result = min(num1 , num2 ,num3);
+                                    System.out.println("the result is: " + result);
+                               }//if
+
+                                    else
+                                        System.out.println("enter the 1st number: ");
+                                        int num1 = input.nextInt();
+                                        System.out.println("enter the 2nd number: ");
+                                        int num2 = input.nextInt();
+                                        System.out.println("enter the 3rd number: ");
+                                        int num3 = input.nextInt();
+                                        int result = avr(num1 , num2 ,num3);
+                                        System.out.println("the result is: " + result);
+
+
+        }//end while
+    }//end main
+
+    public static int sum ( int a , int b ){
+        int sum = a + b ;
+        return sum;
+    }//end sum
+
+    public static int subtract ( int a , int b ){
+        int subtract = a - b ;
+        return subtract;
+    }//end subtract
+
+    public static int multiply ( int a , int b ){
+        int multiply = a * b ;
+        return multiply;
+    }//end multiply
+
+    public static int divide ( int a , int b ){
+        int divide = a / b ;
+        return divide;
+    }//end divide
+
+    public static int max ( int a , int b , int c ){
+        int max = Math.max(Math.max (a,b),c); //Math.max takes only 2 arguments
+        return max ;
+    }//end max
+
+    public static int min ( int a , int b , int c ){
+        int min = Math.min(Math.min (a,b),c);
+        return min ;
+    }//end min
+
+    public static int avr ( int a , int b ,int c ) {
+        int sum = a + b + c;
+        int avr = sum / 3;
+        return avr;
+    }//end avr
+
+}//end class
